@@ -1,0 +1,30 @@
+services:
+  backend:
+    build:
+      context: ./backend
+    restart: unless-stopped
+    environment:
+      PORT: 3001
+      CONFIG_PATH: /app/config/dashboard.json
+      TEMPLATES_PATH: /app/config/templates.json
+      BACKUP_PATH: ${ANYA_BACKUP_PATH:-/app/config/backups}
+      HEIMDALL_DB_PATH: /app/import/heimdall/app.sqlite
+      DOCKER_SOCKET_PATH: /var/run/docker.sock
+    group_add:
+      - "${DOCKER_GID:-110}"
+    volumes:
+      - ${ANYA_CONFIG_DIR:-./config}:/app/config
+      - ${ANYA_BACKUP_HOST_PATH:-./config/backups}:/app/external-backups
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /opt/heimdall/config/www:/app/import/heimdall:ro
+    expose:
+      - "3001"
+
+  frontend:
+    build:
+      context: ./frontend
+    restart: unless-stopped
+    depends_on:
+      - backend
+    ports:
+      - "${ANYA_PORT:-8088}:80"

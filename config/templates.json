@@ -1,0 +1,157 @@
+{
+  "templates": [
+    {
+      "id": "heimdall",
+      "name": "Heimdall",
+      "description": "Existing homelab start page",
+      "category": "Dashboard",
+      "icon": "layout-dashboard",
+      "iconUrl": "https://cdn.jsdelivr.net/gh/selfhst/icons/svg/heimdall.svg",
+      "defaultUrl": "http://{host}:8090"
+    },
+    {
+      "id": "anya",
+      "name": "Anya",
+      "description": "Live homelab dashboard",
+      "category": "Dashboard",
+      "icon": "server",
+      "defaultUrl": "http://{host}:8088"
+    },
+    {
+      "id": "portainer",
+      "name": "Portainer",
+      "description": "Docker management",
+      "category": "Docker",
+      "icon": "container",
+      "iconUrl": "https://cdn.jsdelivr.net/gh/selfhst/icons/svg/portainer.svg",
+      "defaultUrl": "https://{host}:9443"
+    },
+    {
+      "id": "qbittorrent",
+      "name": "qBittorrent",
+      "description": "Torrent client",
+      "category": "Downloads",
+      "icon": "download",
+      "iconUrl": "https://cdn.jsdelivr.net/gh/selfhst/icons/svg/qbittorrent.svg",
+      "defaultUrl": "http://{host}:8080"
+    },
+    {
+      "id": "n8n",
+      "name": "n8n",
+      "description": "Workflow automation",
+      "category": "Automation",
+      "icon": "workflow",
+      "iconUrl": "https://cdn.jsdelivr.net/gh/selfhst/icons/svg/n8n.svg",
+      "defaultUrl": "http://{host}:5678"
+    },
+    {
+      "id": "booklore",
+      "name": "BookLore",
+      "description": "Book library",
+      "category": "Apps",
+      "icon": "book-open",
+      "iconUrl": "https://cdn.jsdelivr.net/gh/selfhst/icons/svg/booklore.svg",
+      "defaultUrl": "http://{host}:6060"
+    },
+    {
+      "id": "home-assistant",
+      "name": "Home Assistant",
+      "description": "Home automation",
+      "category": "Home",
+      "icon": "home",
+      "iconUrl": "https://cdn.jsdelivr.net/gh/selfhst/icons/svg/home-assistant.svg",
+      "defaultUrl": "http://{host}:8123"
+    },
+    {
+      "id": "proxmox",
+      "name": "Proxmox",
+      "description": "Virtualization platform",
+      "category": "Infrastructure",
+      "icon": "server",
+      "iconUrl": "https://cdn.jsdelivr.net/gh/selfhst/icons/svg/proxmox.svg",
+      "defaultUrl": "https://{host}:8006"
+    },
+    {
+      "id": "ollama",
+      "name": "Ollama",
+      "description": "Local model runtime",
+      "category": "AI",
+      "icon": "bot",
+      "iconUrl": "https://cdn.jsdelivr.net/gh/selfhst/icons/svg/ollama.svg",
+      "defaultUrl": "http://{host}:11434"
+    },
+    {
+      "id": "open-webui",
+      "name": "Open WebUI",
+      "description": "Local AI chat interface",
+      "category": "AI",
+      "icon": "bot",
+      "iconUrl": "https://cdn.jsdelivr.net/gh/selfhst/icons/svg/open-webui.svg",
+      "defaultUrl": "http://{host}:8080"
+    },
+    {
+      "id": "nginx-proxy-manager",
+      "name": "Nginx Proxy Manager",
+      "description": "Reverse proxy and certificates",
+      "category": "Network",
+      "icon": "network",
+      "iconUrl": "https://cdn.jsdelivr.net/gh/selfhst/icons/svg/nginx-proxy-manager.svg",
+      "defaultUrl": "http://{host}:81"
+    },
+    {
+      "id": "plex",
+      "name": "Plex",
+      "description": "Media server",
+      "category": "Media",
+      "icon": "film",
+      "iconUrl": "https://cdn.jsdelivr.net/gh/selfhst/icons/svg/plex.svg",
+      "defaultUrl": "http://{host}:32400"
+    },
+    {
+      "id": "unifi",
+      "name": "UniFi",
+      "description": "Network controller",
+      "category": "Network",
+      "icon": "network",
+      "iconUrl": "https://cdn.jsdelivr.net/gh/selfhst/icons/svg/ubiquiti-unifi.svg",
+      "defaultUrl": "https://{host}:8443",
+      "aliases": ["ubiquiti", "ubiquiti-unifi", "unifi-network"]
+    },
+    {
+      "id": "searxng",
+      "name": "SearXNG",
+      "description": "Private metasearch",
+      "category": "Apps",
+      "icon": "search",
+      "iconUrl": "https://cdn.jsdelivr.net/gh/selfhst/icons/svg/searxng.svg",
+      "defaultUrl": "http://{host}:8080"
+    },
+    {
+      "id": "jellyfin",
+      "name": "Jellyfin",
+      "description": "Media server",
+      "category": "Media",
+      "icon": "film",
+      "iconUrl": "https://cdn.jsdelivr.net/gh/selfhst/icons/svg/jellyfin.svg",
+      "defaultUrl": "http://{host}:8096"
+    },
+    {
+      "id": "sonarr",
+      "name": "Sonarr",
+      "description": "TV series automation",
+      "category": "Media",
+      "icon": "film",
+      "iconUrl": "https://cdn.jsdelivr.net/gh/selfhst/icons/svg/sonarr.svg",
+      "defaultUrl": "http://{host}:8989"
+    },
+    {
+      "id": "radarr",
+      "name": "Radarr",
+      "description": "Movie automation",
+      "category": "Media",
+      "icon": "film",
+      "iconUrl": "https://cdn.jsdelivr.net/gh/selfhst/icons/svg/radarr.svg",
+      "defaultUrl": "http://{host}:7878"
+    }
+  ]
+}

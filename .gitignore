@@ -1,0 +1,13 @@
+node_modules/
+dist/
+.env
+config/dashboard.json
+config/secrets.json
+config/icon-catalog.json
+config/uploads/
+config/data/
+config/backups/
+config/*.tmp
+.DS_Store
+.qa/
+npm-debug.log*

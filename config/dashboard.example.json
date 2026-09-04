@@ -1,0 +1,79 @@
+{
+  "title": "Anya",
+  "links": [],
+  "rssFeeds": [],
+  "rssSettings": {
+    "radarTotalItems": 10,
+    "tickerTotalItems": 24,
+    "tickerSpeedSeconds": 72
+  },
+  "widgets": {
+    "rss": false,
+    "rssTicker": false,
+    "plex": false,
+    "unifi": false,
+    "docker": false,
+    "gluetun": false,
+    "qbittorrent": false,
+    "ollama": false,
+    "assistant": false,
+    "mail": false
+  },
+  "widgetOrder": ["docker", "rss", "unifi", "plex", "gluetun", "qbittorrent", "ollama", "mail"],
+  "widgetLayout": "sidebar",
+  "widgetStyle": "cards",
+  "linkLayout": "grouped",
+  "search": {
+    "label": "Google",
+    "urlTemplate": "https://www.google.com/search?q={query}",
+    "visible": true
+  },
+  "appearance": {
+    "background": {
+      "mode": "default",
+      "preset": "aurora",
+      "dim": 45,
+      "blur": 0
+    }
+  },
+  "integrations": {
+    "docker": {
+      "socketPath": "/var/run/docker.sock"
+    },
+    "plex": {
+      "baseUrl": ""
+    },
+    "unifi": {
+      "baseUrl": "",
+      "site": "default"
+    },
+    "ollama": {
+      "baseUrl": "",
+      "model": ""
+    },
+    "qbittorrent": {
+      "baseUrl": "",
+      "showNames": false,
+      "torrentLimit": 5,
+      "speedUnit": "mbps"
+    },
+    "gluetun": {
+      "dockerSourceId": "",
+      "containerName": "",
+      "controlUrl": "",
+      "expectedHostIp": ""
+    },
+    "mail": {
+      "providerName": "Mail",
+      "host": "",
+      "port": 993,
+      "secure": true,
+      "username": "",
+      "mailbox": "INBOX",
+      "maxItems": 8,
+      "unreadAlertThreshold": 0,
+      "openUrl": ""
+    },
+    "additional": {}
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "id": "/",
+  "name": "Anya",
+  "short_name": "Anya",
+  "description": "Private homelab command center",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#121a22",
+  "theme_color": "#172129",
+  "orientation": "any",
+  "categories": ["productivity", "utilities"],
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
