@@ -2,6 +2,8 @@
 
 Anya is a self-hosted homelab dashboard inspired by Heimdall, with configurable link cards, RSS feeds and live widgets for homelab integrations.
 
+This is not supposed to be a full product. It is a private dashboard project built for my own homelab, shared as-is for people who want to borrow ideas or run their own copy.
+
 ## Features
 
 - React + TypeScript + Vite frontend
@@ -79,10 +81,10 @@ The default compose file also mounts Heimdall from `/opt/heimdall/config/www` re
 
 ## Install from GitHub
 
-After publishing the repository, a fresh Docker install should look like this:
+After publishing the repository, a fresh Docker install from source should look like this:
 
 ```bash
-git clone https://github.com/YOUR-USER/anya.git
+git clone https://github.com/themikaelt/anya.git
 cd anya
 cp .env.example .env
 docker compose up --build
@@ -94,7 +96,43 @@ For a second test instance on the same host, use another port:
 ANYA_PORT=8093 docker compose up --build
 ```
 
+After the GitHub Actions workflow has published images to GitHub Container Registry, the same install can use prebuilt images instead of building locally:
+
+```bash
+git clone https://github.com/themikaelt/anya.git
+cd anya
+cp .env.example .env
+docker compose -f docker-compose.ghcr.yml up -d
+```
+
+The prebuilt images are:
+
+- `ghcr.io/themikaelt/anya-frontend:latest`
+- `ghcr.io/themikaelt/anya-backend:latest`
+
+If the GHCR images are not public yet, use the source-build `docker compose up --build` command.
+
 The first run should start with no configured services, no RSS feeds and no enabled widgets. Add services from the UI and verify that `config/dashboard.json` and `config/secrets.json` are created locally but remain ignored by git.
+
+## Publish to GitHub
+
+Create an empty repository named `anya` under the `themikaelt` GitHub account, then push this public snapshot:
+
+```bash
+git remote add origin https://github.com/themikaelt/anya.git
+git branch -M main
+git push -u origin main
+```
+
+Do not commit your private runtime files. The public snapshot is designed to keep these local-only:
+
+- `config/dashboard.json`
+- `config/secrets.json`
+- `config/uploads/`
+- `config/data/`
+- `config/backups/`
+
+When the first push lands on `main`, GitHub Actions builds and publishes the Docker images to GHCR. If you want other people to install with `docker-compose.ghcr.yml`, make the packages public in GitHub package settings.
 
 ## Run locally
 
