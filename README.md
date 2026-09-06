@@ -1,8 +1,12 @@
 # Anya
 
-Anya is a self-hosted homelab dashboard with service links, RSS feeds and live widgets for common home server tools.
+Anya is a FULLY VIBE-CODED self-hosted homelab dashboard with service links, RSS feeds and live widgets for common home server tools.
 
 This is not supposed to be a full product. It is a private dashboard project built for my own homelab, shared as-is for people who want to borrow ideas or run their own copy.
+
+You can check my video on Anya:
+https://youtu.be/rsVZqyi3BWw
+
 
 ## Features
 
